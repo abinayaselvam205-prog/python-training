@@ -9,23 +9,30 @@ def div(a,b):
         return"error:divison by zero"
     return a/b
 print("=====simple calculator=====")
-while True:
-    print("choose option:")
-    print("1.Add(+)")
-    print("2.Sub(-)")
-    print("3.mul(*)")
-    print("4.div(/)")
-    op=(input("enter your choice(+,-,*,/):"))
+print("press 'q' to quit.\n")
+op=" "
+while op != "q":
+    op=input("enter operation(+,-,*./ or q to quit):")
+    if op =="q":
+        print("Good Bye\n")
+        break
+    if op not in ('+','-','*','/'):
+        print("invalid operator !try again\n")
+        continue
+        print("1.Add(+)")
+        print("2.Sub(-)")
+        print("3.mul(*)")
+        print("4.div(/)")
     x=float(input("enter the first number:"))
     y=float(input("enter the second number:"))
-    if(op=='+'):
-        print("result=",x+y)
+    if(op =='+'):
+            print("result=",x+y)
     elif(op=='-'):
-        print("result=",x-y)
+            print("result=",x-y)
     elif(op=='*'):
-        print("result=",x*y)
+            print("result=",x*y)
     elif(op=='/'):
-        print("result=",x/y)
+            print("result=",x/y)
     else:
-        print("invalid")
+            print("invalid")
     
